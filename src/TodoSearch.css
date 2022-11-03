@@ -1,0 +1,54 @@
+header {
+    --start: 15%;
+
+    height: 130px;
+    background-image: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgba(54, 89, 219, .33) 10%, rgba(54, 89, 219, .33) 17%), linear-gradient(to right, #5b7cfa, #3659db);
+    color: #fff;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.TodoSearchAll {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: calc(var(--start) * .75);
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    margin: 0;
+
+}
+
+span {
+    display: block;
+}
+
+.TodoSearchTitle {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 6.5px;
+    text-align: center;
+}
+
+.TodoSearch {
+    border-radius: 5px;
+    margin: 0 24px;
+    height: 34px;
+    width: calc(100% - 62px);
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    /* color: #1E1E1F; */
+}
+
+.leaderboard__icon {
+    fill: #fff;
+    opacity: .35;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: var(--start);
+    transform: translate(-50%, -50%);
+}
