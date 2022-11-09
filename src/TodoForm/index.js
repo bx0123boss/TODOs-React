@@ -8,7 +8,6 @@ function TodoForm() {
   const {
     addTodo,
     setOpenModal,
-    todos,
     filterTodos,
   } = React.useContext(TodoContext);
 
