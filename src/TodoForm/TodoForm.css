@@ -6,6 +6,7 @@ form {
     display: flex;
     align-content: center;
     flex-direction: column;
+    border-radius: 10px;
   }
   
   label {

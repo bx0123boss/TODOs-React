@@ -7,7 +7,7 @@ import { TodoItem } from '../TodoItem';
 import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from "../CreateTodoButton";
 import { Modal } from '../Modal'
-
+import {MyLoader} from '../MyLoader';
 function AppUI() {
 
   const {
@@ -21,15 +21,15 @@ function AppUI() {
   } = React.useContext(TodoContext);
   return (
     <React.Fragment>
-      <TodoCounter />
       <article className="contenedor">
+      <TodoCounter />
         <header>
           <TodoSearch />
         </header>
 
         <TodoList>
           {error && <p>Desespéarate, hubo un error...</p>}
-          {loading && <p>Estamos Cargando, no desesperes...</p>}
+          {loading && <MyLoader />}
           {(!loading && !filterTodos.length) && <p>¡Crea tu primer TODO!</p>}
 
           {filterTodos.map((todo) => (

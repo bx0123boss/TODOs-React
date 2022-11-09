@@ -29,10 +29,14 @@ function TodoProvider(props){
       }
     
       //completar todos
+
       const completeTodo = (text) => {
         const todoIndex = todos.findIndex(todo => todo.text===text);
         const newTodos = [...todos];
-        newTodos[todoIndex].completed = true;
+        if(todos[todoIndex].completed)
+          newTodos[todoIndex].completed = false;
+        else
+          newTodos[todoIndex].completed = true;        
         saveTodos(newTodos);
       };
       //borrar todo:
@@ -68,6 +72,7 @@ function TodoProvider(props){
             openModal,
             setOpenModal,
             addTodo,
+            todos,
         }}>
             {props.children}
         </TodoContext.Provider>

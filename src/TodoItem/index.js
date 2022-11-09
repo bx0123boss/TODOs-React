@@ -3,8 +3,12 @@ import './TodoItem.css';
 
 function TodoItem(props) {
 
-  // const onComplete= ()=>{
-  //   alert("Se completo: " + props.text);
+  // const onComplete= (event)=>{
+  //   alert("Se completo: " + props.key);
+  //   // props.className.remove('Icon-check--active');
+  //   event.currentTarget.classList.toggle('Icon-check--active');
+  //   const p = document.getElementById('')
+  //   //event.currentTarget.classList.toggle('TodoItem-p--complete');
   // };
 
   // const onDelete= ()=>{

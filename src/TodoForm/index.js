@@ -2,24 +2,32 @@ import React from "react";
 import { TodoContext } from "../TodoContext";
 import './TodoForm.css';
 function TodoForm() {
+
+
   const [newTodoValue, setNewTodoValue] = React.useState('');
   const {
     addTodo,
     setOpenModal,
+    todos,
+    filterTodos,
   } = React.useContext(TodoContext);
+
   const onCancel = () => {
     setOpenModal(false);
   };
+
   const onSubmit = (event) => {
     event.preventDefault();
-    if (newTodoValue.length > 0) {
+    const existe = filterTodos.filter(todo => todo.text===newTodoValue);
+    if(existe.length===0 && newTodoValue.length > 0) {
       addTodo(newTodoValue);
       setOpenModal(false);
     }
     else {
-      alert("Cuidado! No has agregado nada aun");
+      alert("Cuidado! hay algo mal con el TODO");
     }
   };
+
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
   };

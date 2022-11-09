@@ -5,7 +5,6 @@ import { TodoContext } from '../TodoContext';
 function CreateTodoButton(){
     const {openModal, setOpenModal} = React.useContext(TodoContext);
     const onClickButton = ()=>{
-        console.log("holi" + openModal);
         setOpenModal(!openModal);
     }
     return(
