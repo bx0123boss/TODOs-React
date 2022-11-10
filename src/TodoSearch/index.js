@@ -47,8 +47,8 @@ function TodoSearch() {
                 </g>
             </svg>
             <h1 className="TodoSearchAll">
-                <span className="TodoSearchTitle">Buscar</span>
-                <input className="TodoSearch" placeholder="Cebolla" value={searchValue} onChange={onSearchValueChanged}/>
+                <span className="TodoSearchTitle">buscar</span>
+                <input className="TodoSearch" placeholder="Search..." value={searchValue} onChange={onSearchValueChanged}/>
             </h1>
         </header>
 
